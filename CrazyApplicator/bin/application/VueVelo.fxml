@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VueVeloController">
+   <top>
+      <AnchorPane prefHeight="384.0" prefWidth="784.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="velo" fitHeight="351.0" fitWidth="448.0" layoutX="14.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+            <ColorPicker fx:id="couleurchoisie" layoutX="628.0" layoutY="22.0" styleClass="color-picker" stylesheets="@application.css" />
+            <Label fx:id="prix" layoutX="572.0" layoutY="324.0" prefHeight="17.0" prefWidth="200.0" text="Prix :" />
+            <RadioButton fx:id="oui" layoutX="569.0" layoutY="205.0" mnemonicParsing="false" stylesheets="@application.css" text="Oui">
+               <toggleGroup>
+                  <ToggleGroup fx:id="ouinon" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="non" layoutX="569.0" layoutY="297.0" mnemonicParsing="false" stylesheets="@application.css" text="Non" toggleGroup="$ouinon" />
+            <TextField fx:id="perso" layoutX="569.0" layoutY="228.0" prefHeight="63.0" prefWidth="157.0" promptText="Texte personnalisé" styleClass="text-field" stylesheets="@application.css" />
+            <Label fx:id="custom" layoutX="580.0" layoutY="172.0" text="Custom : +0€" textFill="RED" />
+            <Button layoutX="635.0" layoutY="91.0" mnemonicParsing="false" onAction="#onClickColorThree" prefHeight="25.0" prefWidth="26.0" styleClass="greenbtn" stylesheets="@application.css" />
+            <Button layoutX="679.0" layoutY="91.0" mnemonicParsing="false" onAction="#onClickColorTwo" prefHeight="25.0" prefWidth="26.0" styleClass="bluebtn" stylesheets="@application.css" />
+            <Button layoutX="726.0" layoutY="91.0" mnemonicParsing="false" onAction="#onClickColorOne" prefHeight="25.0" prefWidth="26.0" styleClass="redbtn" stylesheets="@application.css" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
